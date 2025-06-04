@@ -1,0 +1,22 @@
+{
+  "name": "mcp-chat-lib",
+  "version": "1.0.0",
+  "description": "Core library for MCP Chat functionality",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "chalk": "^5.4.1", 
+    "zod": "^3.23.8" 
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
+}
+

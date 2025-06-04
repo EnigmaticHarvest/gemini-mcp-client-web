@@ -1,0 +1,187 @@
+/* packages/mcp-chat-webapp/src/index.css */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */ /* Let content flow from top */
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  max-width: 1000px; /* Max width for the app */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.config-section, .chat-section {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+h1, h2, h3 {
+  color: #555;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"], input[type="url"], input[type="password"], textarea {
+  width: calc(100% - 22px); /* Account for padding and border */
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+}
+button:hover {
+  background-color: #0056b3;
+}
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.server-list ul {
+  list-style: none;
+  padding: 0;
+}
+.server-list li {
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+  padding: 8px;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.server-list li button {
+  background-color: #dc3545;
+  font-size: 0.8em;
+  padding: 5px 8px;
+}
+.server-list li button.default-btn {
+  background-color: #28a745;
+  margin-left: 5px;
+}
+.server-list li span.default-indicator {
+  color: green;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.messages-window {
+  height: 400px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+}
+
+.message {
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 4px;
+  word-wrap: break-word; /* Ensure long words break */
+  white-space: pre-wrap; /* Preserve whitespace and newlines */
+}
+.message.user {
+  background-color: #e1f5fe;
+  text-align: right;
+  margin-left: auto; /* Push to right */
+  max-width: 70%;
+}
+.message.assistant {
+  background-color: #e8eaf6;
+  text-align: left;
+  margin-right: auto; /* Push to left */
+  max-width: 70%;
+}
+.message.system, .message.tool {
+  background-color: #f0f0f0;
+  font-style: italic;
+  color: #555;
+  font-size: 0.9em;
+  text-align: center;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.message.error {
+    background-color: #ffebee;
+    color: #c62828;
+    border: 1px solid #ef9a9a;
+}
+
+.chat-input-area {
+  display: flex;
+  gap: 10px;
+}
+.chat-input-area textarea {
+  flex-grow: 1;
+}
+.file-input-label {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #6c757d;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  height: fit-content; /* Align with button */
+  line-height: normal; /* Adjust based on textarea padding */
+  align-self: flex-end; /* Align to bottom of flex container */
+  margin-bottom: 10px; /* Match textarea margin */
+}
+.file-input-label:hover {
+  background-color: #5a6268;
+}
+input[type="file"] {
+  display: none;
+}
+.selected-files p {
+    font-size: 0.9em;
+    color: #333;
+    margin: 0 0 5px 0;
+}
+.selected-files button {
+    font-size: 0.8em;
+    padding: 3px 6px;
+    margin-left: 5px;
+    background-color: #ffc107;
+    color: black;
+}
+

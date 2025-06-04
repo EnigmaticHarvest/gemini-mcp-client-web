@@ -1,0 +1,16 @@
+{
+  "name": "mcp-chat-web-monorepo",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "lib:build": "npm run build -w packages/mcp-chat-lib",
+    "webapp:dev": "npm run dev -w packages/mcp-chat-webapp",
+    "webapp:build": "npm run build -w packages/mcp-chat-webapp"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
+}
+
