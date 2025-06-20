@@ -87,7 +87,3 @@ Source maps are configured for both `mcp-chat-lib` (via `tsconfig.json`) and `mc
 
 - Debugging for `mcp-chat-lib` and `mcp-chat-webapp` should work as expected.
 - Debugging for `@modelcontextprotocol/sdk` might show compiled JavaScript if its published source maps have issues or if you are not using the local alias with source code correctly mapped.
-
----
-
-This README provides a starting point. Feel free to expand it with more details about your project's architecture, deployment, testing, or specific features. 
